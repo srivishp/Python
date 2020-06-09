@@ -5,8 +5,7 @@ import pyperclip
 phoneRegex = re.compile(r''' 
 # +91 9876543210 +91 98765 43210  020 87654321 020 8765 4321  020-87654321 (020) 8765 4321                       
 (
-((\+\d\d)|(\d\d))?         #+91 or 91
-((\d\d\d)|(\(\d\d\d\)))?  #020 or (020)
+((\+\d{2})|(\d{2,3})|(\(\d{2,3}\)))?         #+91 or 91 or 020 or (020)
 (\s|-)#hyphen or space separator
 (\d{8,10})|(\d{4,5}\s\d{4,5}) #phone number mobile or landline
 )
